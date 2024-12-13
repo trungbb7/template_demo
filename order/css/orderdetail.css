@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+.container-main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.header {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.header p {
+    color: #888;
+    margin: 5px 0 0 0;
+}
+.status {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.status span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.status .completed {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.details div {
+    width: 30%;
+}
+.details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.details p {
+    margin: 5px 0;
+}
+.details p span {
+    font-weight: bold;
+}
+.details .email, .details .phone {
+    color: #007bff;
+}
+.products {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+}
+.products table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.products th, .products td {
+    padding: 10px;
+    text-align: left;
+}
+.products th {
+    width: 200px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+.products td {
+    border-bottom: 1px solid #e0e0e0;
+}

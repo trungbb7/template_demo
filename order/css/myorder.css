@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container-main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: rgba(13, 164, 135, 1);
+    color: white;
+}
+
+.order-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.order-header h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.order-header .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.status.pending {
+    background-color: #ffc107;
+}
+
+.status.delivered {
+    background-color: #28a745;
+}
+
+.order-details {
+    display: flex;
+    gap: 20px;
+}
+
+.order-details img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.order-info {
+    flex-grow: 1;
+}
+
+.order-info h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.order-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.order-info .category {
+    color: #666;
+}
+
+.order-info .price {
+    color: red;
+    font-weight: bold;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.order-footer .total .amount {
+    color: red;
+    font-weight: bold;
+}
+
+.order-footer .total {
+    font-size: 1.1em;
+    color: black;
+    font-weight: normal;
+}
+
+.order-footer .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.view {
+    color: darkcyan;
+    border-color: darkcyan;
+}
+
+.btn.cancel {
+    color: red;
+    border-color: red;
+}
+
+.tab:hover,
+.tab:hover {
+    background-color: darkcyan;
+    color: #fff;
+    cursor: pointer;
+}

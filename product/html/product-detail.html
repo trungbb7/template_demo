@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/product-detail.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <nav id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="left-side">
+                    <div class="logo">
+                        <a href="#">
+                            <i class="fa-solid fa-bicycle"></i>
+                            <span>Electric Bike</span>
+                        </a>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Trang chủ</a></li>
+                        <li><a href="./product-list.html">Sản phẩm</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="right-side">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button type="button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <div class="user-actions">
+                        <div class="cart">
+                            <a href="../../order/html/cart.html" class="cart-link">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="badge">1</span>
+                            </a>
+                        </div>
+
+                        <div class="user-menu dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <img class="user-photo" src="https://avatar.iran.liara.run/public/boy?username=Ash"
+                                    alt="user photo">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="../../account/html/information.html"><i
+                                            class="fa-solid fa-user"></i>Thông tin</a></li>
+                                <li><a class="dropdown-item" href="../../order/html/myorder.html"><i
+                                            class="fa-solid fa-wallet"></i>Đơn hàng</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i>Đăng
+                                        xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main">
+        <section class="card-body">
+            <div class="row product-container">
+                <div class="col-6">
+                    <div class="photos-slide">
+                        <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                            class="mySwiper" thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/Yadea-igo-do-fix-768x768.jpg" />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/yadea-igo-2-768x768.jpg" />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/yadea-igo-3-768x768.jpg" />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/yadea-igo-4-768x768.jpg" />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/yadea-igo-5-768x768.jpg" />
+                            </swiper-slide>
+
+                        </swiper-container>
+
+                        <swiper-container class="mySwiper2" space-between="10" slides-per-view="5" free-mode="true"
+                            watch-slides-progress="true">
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/Yadea-igo-do-fix-768x768.jpg" />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/yadea-igo-2-768x768.jpg" />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/yadea-igo-3-768x768.jpg" />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/yadea-igo-4-768x768.jpg" />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img src="https://xedien.vn/wp-content/uploads/2021/03/yadea-igo-5-768x768.jpg" />
+                            </swiper-slide>
+
+                        </swiper-container>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="detail">
+                        <div class="product-info">
+                            <h4 class="product-name">Xe Đạp Điện E-Bike YADEA IGO</h4>
+                            <div class="price">
+                                <span class="final-price"> 6.990.000 đ</span>
+                                <span class="stock-price">9.000.000 đ</span>
+                            </div>
+                            <div class="rating rating-3">
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="bonus">
+                                <div class="bonus-label">Khuyến mãi đặc biệt:</div>
+                                <div class="bonus-value"><i class="fa-solid fa-award icon"></i>Bảo hành xe 3 năm</div>
+                                <div class="bonus-value"><i class="fa-solid fa-arrow-right-arrow-left icon"></i>Đổi hàng
+                                    miễn phí trong 72 giờ
+                                </div>
+                                <div class="bonus-value"><i class="fa-solid fa-truck-fast icon"></i>Vận chuyển miễn phí
+                                    trong 30km
+                                </div>
+                                <div class="bonus-value"><i class="fa-solid fa-money-check icon"></i>Hỗ trợ trả góp
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class=" add-to-cart-btn">Thêm vào giỏ hàng</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="description">
+            <div class="row">
+                <div class="col">
+
+
+                    <ul class="nav nav-underline fs-9" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" id="description-tab"
+                                data-bs-toggle="tab" href="#tab-description" role="tab" aria-controls="tab-home"
+                                aria-selected="true" tabindex="-1">Mô tả</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link " id="review-tab"
+                                data-bs-toggle="tab" href="#tab-review" role="tab" aria-controls="tab-review"
+                                aria-selected="false">Đánh giá</a></li>
+
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade active show tab-item" id="tab-description" role="tabpanel"
+                            aria-labelledby="description-tab">
+                            <div class="paragraph">Xe
+                                đạp điện YADEA IGO có tổng thể nhỏ gọn, thiết kế thời trang với bộ tem trẻ trung năng
+                                động.
+                                Mẫu xe đạp điện này được học sinh cấp 2, cấp 3 yêu thích với màu sắc bắt mắt và chiều
+                                cao lý
+                                tưởng và rất gọn nhẹ chỉ hơn 40kg.
+                            </div>
+                            <div class="paragraph">Xe đạp điện YADEA IGO sử dụng pin Lithium gọn nhẹ chỉ 6kg được lắp
+                                dưới yên, có thể tháo lắp
+                                pin dễ dàng để sạc tiện lợi và nhanh chóng. Pin Lithium có độ bền và tuổi thọ cao hơn ắc
+                                quy
+                                thông thường từ 1 đến 2 năm.
+                                Xe đạp điện YADEA IGO được trang bị Smartkey đa năng và thông minh. Smartkey dễ dàng sử
+                                dụng
+                                khi có thể sử dụng từ xe để mở/khoá xe từ xa. Đồng thời mẫu xe này còn được trang bị hệ
+                                thống an toàn chống trộm được điều khiển bởi Smartkey dù ở khoảng cách xa. Hệ thống
+                                chống
+                                trộm toàn xe sẽ báo động khi có người lại chạm vào xe. Vì thế đây là mẫu xe đạp điện
+                                mang
+                                lại cảm giác an tâm cho người dùng khi sử dụng.
+                            </div>
+                            <div class="paragraph">Với đèn LED công nghệ mới với cường độ sáng cao xe đạp điện YADEA IGO
+                                đảm bảo an toàn khi di
+                                chuyển trong đêm hoặc những đoạn đường không đủ ánh sáng. Được trang bị hệ thống phanh
+                                tang
+                                trống trước, sau với độ nhạy cao giúp điều chỉnh vận tốc của xe dễ dàng và linh hoạt.
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane fade  tab-item" id="tab-review" role="tabpanel"
+                            aria-labelledby="review-tab">
+                            <div class="review-container">
+                                <div class="row">
+                                    <div class="col-6 review-list">
+                                        <div class="review-item">
+                                            <div class="head">
+                                                <div class="rating rating-4">
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                </div>
+                                                <div class="name">Nguyễn Minh Trung</div>
+                                            </div>
+                                            <div class="body">
+                                                10/10: Xe đạp điện YADEA IGO đẹp và phù hợp với tính năng của mình.
+                                                Tôi đã sử dụng thêm thiết bị điều khiển đầu vào của xe để điều chỉnh vận
+                                                tốc của xe dễ dàng hơn. Tôi cảm thấy
+                                                rất thích và sử dụng tốt xe đạp điện này.
+
+                                            </div>
+                                        </div>
+
+                                        <div class="review-item">
+                                            <div class="head">
+                                                <div class="rating rating-4">
+                                                    <input type="hidden" name="rating" value="0">
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                                </div>
+                                                <div class="name">Nguyễn Minh Trung</div>
+                                            </div>
+                                            <div class="body">
+                                                10/10: Xe đạp điện YADEA IGO đẹp và phù hợp với tính năng của mình.
+                                                Tôi đã sử dụng thêm thiết bị điều khiển đầu vào của xe để điều chỉnh vận
+                                                tốc của xe dễ dàng hơn. Tôi cảm thấy
+                                                rất thích và sử dụng tốt xe đạp điện này.
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <form class="col-6 review-form">
+                                        <p class="title">Đánh giá của bạn</p>
+                                        <div class="rating">
+                                            <p class="rating-title">Rating:</p>
+                                            <input type="hidden" name="rating" value="0">
+                                            <div class="star-wrapper">
+                                                <i class="fa-solid fa-star star s1" rating="5"></i>
+                                                <i class="fa-solid fa-star star s2" rating="4"></i>
+                                                <i class="fa-solid fa-star star s3" rating="3"></i>
+                                                <i class="fa-solid fa-star star s4" rating="2"></i>
+                                                <i class="fa-solid fa-star star s5" rating="1"></i>
+
+                                            </div>
+                                        </div>
+                                        <div class="input-item">
+                                            <label for="review">Đánh giá:</label>
+                                            <br>
+                                            <textarea id="review" name="review" rows="5" cols="30"></textarea>
+                                        </div>
+                                        <button type="submit">Gửi</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/5ea815c1d0.js"></script>
+    <script src="../js/product-detail.js"></script>
+</body>
+
+</html>
+
+
+<div class="footer">
+    <footer>
+        <div class="social"><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i
+                    class="fa-brands fa-instagram"></i></a><a href="#"><i
+                    class="fa-brands fa-square-x-twitter"></i></a><a href="#"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2024</p>
+    </footer>
+</div>

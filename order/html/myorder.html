@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn hàng của tôi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/myorder.css">
+</head>
+
+<body>
+    <!-- Header -->
+
+    <nav id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="left-side">
+                    <div class="logo">
+                        <a href="#">
+                            <i class="fa-solid fa-bicycle"></i>
+                            <span>Electric Bike</span>
+                        </a>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="../../product/html/index.html" class="active">Trang chủ</a></li>
+                        <li><a href="../../product/html/product-list.html">Sản phẩm</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="right-side">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button type="button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <div class="user-actions">
+                        <div class="cart">
+                            <a href="#" class="cart-link">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="badge">1</span>
+                            </a>
+                        </div>
+
+                        <div class="user-menu dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <img class="user-photo" src="https://avatar.iran.liara.run/public/boy?username=Ash"
+                                    alt="user photo">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="../../account/html/information.html"><i
+                                            class="fa-solid fa-user"></i>Thông tin</a></li>
+                                <li><a class="dropdown-item" href="../../order/html/myorder.html"><i
+                                            class="fa-solid fa-wallet"></i>Đơn hàng</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i>Đăng
+                                        xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-main">
+        <h1>
+            Đơn hàng của tôi
+        </h1>
+        <div class="tabs">
+            <div class="tab active">
+                Tất cả
+            </div>
+            <div class="tab">
+                Chờ xác nhận
+            </div>
+            <div class="tab">
+                Đang giao
+            </div>
+            <div class="tab">
+                Đã giao
+            </div>
+            <div class="tab">
+                Đã hủy
+            </div>
+        </div>
+        <div class="order-card">
+            <div class="order-header">
+                <h2>
+                    Đơn hàng #2737
+                </h2>
+                <div class="status pending">
+                    Chờ xác nhận
+                </div>
+            </div>
+            <p>
+                Ngày đặt: 04/10/2024
+            </p>
+            <div class="order-details">
+                <img alt="Xe đạp điện Model X" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/7Tu0SOyEpl7GGxOVTmmY8DPiRBtA44STewRkkEBQgsd77j3JA.jpg"
+                    width="100" />
+                <div class="order-info">
+                    <h3>
+                        <a href="./orderdetail.html">Xe đạp điện 1</a>
+                    </h3>
+                    <p class="category">
+                        Phân loại hàng: Đen
+                    </p>
+                    <p>
+                        Số lượng: 1
+                    </p>
+                    <p class="price">
+                        10.000.000 VND
+                    </p>
+                </div>
+            </div>
+            <div class="order-footer">
+                <div class="total">
+                    Tổng tiền: <span class="amount">10.000.000 VND</span>
+                </div>
+                <div class="actions">
+                    <div class="btn view">
+                        <a href="./orderdetail.html">Xem chi tiết</a>
+                    </div>
+                    <div class="btn cancel">
+                        Hủy đơn hàng
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-card">
+            <div class="order-header">
+                <h2>
+                    Đơn hàng #3727
+                </h2>
+                <div class="status delivered">
+                    Đã giao hàng
+                </div>
+            </div>
+            <p>
+                Ngày đặt: 04/10/2024
+            </p>
+            <div class="order-details">
+                <img alt="Xe đạp điện Model Y" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/yIR2s2jtOHJeAqBADz6x7NIi6lvvIwKP3d0r8Z42z0u57j3JA.jpg"
+                    width="100" />
+                <div class="order-info">
+                    <h3>
+                        <a href="./orderdetail.html">Xe đạp điện 2</a>
+                    </h3>
+                    <p class="category">
+                        Phân loại hàng: Xanh
+                    </p>
+                    <p>
+                        Số lượng: 1
+                    </p>
+                    <p class="price">
+                        12.000.000 VND
+                    </p>
+                </div>
+            </div>
+            <div class="order-footer">
+                <div class="total">
+                    Tổng tiền: <span class="amount">12.000.000 VND</span>
+                </div>
+                <div class="actions">
+                    <div class="btn view">
+                        <a href="./orderdetail.html">Xem chi tiết</a>
+                    </div>
+                    <div class="btn cancel">
+                        Hủy đơn hàng
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <footer>
+            <div class="social"><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i
+                        class="fa-brands fa-instagram"></i></a><a href="#"><i
+                        class="fa-brands fa-square-x-twitter"></i></a><a href="#"><i
+                        class="fa-brands fa-telegram"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Copyright © 2024</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

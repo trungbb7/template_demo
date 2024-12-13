@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 0;
+    background-color: #f0f2f5;
+}
+.register-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* width: 400px; */
+    text-align: center;
+}
+.register-container h2 {
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+    text-align: left;
+}
+.form-group label {
+    font-size: larger;
+}
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-label {
+    color: rgba(0, 0, 0, 0.6)
+}
+.eye-icon {
+    position: absolute;
+    right: 5px;
+    top: 39px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+.register-btn {
+    width: 100%;
+    background-color: rgba(13, 164, 135, 1);
+    border: none;
+    color: white;
+    font-size: larger;
+}
+.register-btn:hover {
+    background-color: #138496;
+}
+.login {
+    margin-top: 15px;
+}
+.login a {
+    color: rgba(13, 164, 135, 1);
+    text-decoration: none;
+}
+.login a:hover {
+    text-decoration: underline;
+}
+.terms {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: left;
+}
+.terms input[type="checkbox"] {
+    margin-right: 5px;
+}
+.terms a {
+    color: rgba(13, 164, 135, 1);
+    text-decoration: none;
+}
+.terms a:hover {
+    text-decoration: underline;
+}

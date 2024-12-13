@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    /* display: flex; */
+    background-color: #f0f2f5;
+}
+.container.main {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.profile-card, .details-card, .password-container{
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+h2 {
+    font-size: x-large;
+}
+.major, .address {
+    margin-bottom: 8px;
+}
+.details-card {
+    width: 600px;
+}
+.detail-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+.detail-item label {
+    width: 150px;
+    padding: 12px 0;
+}
+.detail-item input {
+    width: 70%;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: default;
+}
+.detail-item .password {
+    border: none;
+    outline: none;
+    cursor: default;
+}
+.eye-icon {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.profile-info {
+    text-align: center;
+}
+.custom-update-btn, .custom-save-btn {
+    background-color: rgba(13, 164, 135, 1);
+    color: #ffffff;
+    border: 2px solid rgba(13, 164, 135, 1);
+}
+.custom-update-btn:hover, .custom-save-btn:hover{
+    background-color: #138496;
+}
+.confirm-btn {
+    background-color: #ffffff;
+    color: rgba(13, 164, 135, 1);
+    border: 2px solid rgba(13, 164, 135, 1);
+}
+.confirm-btn:hover {
+    background-color: #138496;
+    color: #ffffff;
+}
+.password-container {
+    align-items: center;
+}
+.password-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 10px;
+    position: relative;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.eye-icon1 {
+    position: absolute;
+    right: 5px;
+    top: 38px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}

@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                Admin Dashboard
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-bs-toggle="dropdown">
+
+                            Admin
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container ">
+        <div class="row">
+            <!-- Left side -->
+            <div class="col-3 sidebar">
+                <div class="category">
+                    <div class="category-title">Danh mục</div>
+                    <ul>
+                        <li class="category-item"><a href="./admin-dashboard.html"><i
+                                    class="fa-solid fa-table-columns icon"></i>Dashboard</a>
+                        </li>
+                        <li class="category-item   active"><a href="./admin-product.html"><i
+                                    class="fa-solid fa-bicycle icon"></i>Sản
+                                phẩm</a>
+                        </li>
+                        <li class="category-item"><a href="./admin-customer.html"><i
+                                    class="fa-solid fa-users icon"></i>Khách
+                                hàng</a>
+                        </li>
+                        <li class="category-item"><a href="./admin-order.html"><i class="fa-solid fa-book icon"></i>Đơn
+                                hàng</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="col-9">
+                <!-- Right side -->
+                <div class="content">
+                    <div class="title">
+                        <p>Sản phẩm</p>
+                    </div>
+
+
+                    <table id="example" class="display" style="width:100%">
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i> Thêm sản phẩm</button>
+                        <thead>
+                            <tr>
+                                <th class="text-900  white-space-nowrap">Tên</th>
+                                <th class="text-900  white-space-nowrap">Danh mục</th>
+                                <th class="text-900  white-space-nowrap">Giá</th>
+                                <th class="text-900  white-space-nowrap">Giảm giá</th>
+                                <th class="text-900  white-space-nowrap">Số lượng</th>
+                                <th class="text-900  white-space-nowrap">Thương hiệu</th>
+                                <th class="text-900" data-orderable="false"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Xe Máy Điện DK Bike Vespa Aura</td>
+                                <td>Xe máy điện</td>
+                                <td>18.900.000</td>
+                                <td>5%</td>
+                                <td>20</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS 2024</td>
+                                <td>Xe đạp điện</td>
+                                <td>12.500.000</td>
+                                <td>10%</td>
+                                <td>35</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Gogo Dibao S5</td>
+                                <td>Xe máy điện</td>
+                                <td>22.800.000</td>
+                                <td>7%</td>
+                                <td>15</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Xmen Neo</td>
+                                <td>Xe đạp điện</td>
+                                <td>11.800.000</td>
+                                <td>5%</td>
+                                <td>42</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea Odora S3</td>
+                                <td>Xe máy điện</td>
+                                <td>20.500.000</td>
+                                <td>8%</td>
+                                <td>8</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Cap A</td>
+                                <td>Xe đạp điện</td>
+                                <td>13.200.000</td>
+                                <td>6%</td>
+                                <td>28</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Honda Vsun V3</td>
+                                <td>Xe máy điện</td>
+                                <td>19.900.000</td>
+                                <td>10%</td>
+                                <td>12</td>
+                                <td>Honda</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS M133S</td>
+                                <td>Xe đạp điện</td>
+                                <td>10.500.000</td>
+                                <td>5%</td>
+                                <td>50</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Gogo SS</td>
+                                <td>Xe máy điện</td>
+                                <td>21.500.000</td>
+                                <td>7%</td>
+                                <td>25</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Milan II</td>
+                                <td>Xe đạp điện</td>
+                                <td>14.500.000</td>
+                                <td>8%</td>
+                                <td>18</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea G5 Lite</td>
+                                <td>Xe máy điện</td>
+                                <td>17.800.000</td>
+                                <td>5%</td>
+                                <td>32</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Espero S</td>
+                                <td>Xe đạp điện</td>
+                                <td>12.900.000</td>
+                                <td>10%</td>
+                                <td>40</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Vinfast Klara S</td>
+                                <td>Xe máy điện</td>
+                                <td>23.500.000</td>
+                                <td>6%</td>
+                                <td>10</td>
+                                <td>Vinfast</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS Nioshima Plus</td>
+                                <td>Xe đạp điện</td>
+                                <td>11.200.000</td>
+                                <td>8%</td>
+                                <td>48</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Pansy S</td>
+                                <td>Xe máy điện</td>
+                                <td>20.800.000</td>
+                                <td>5%</td>
+                                <td>22</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Xmen</td>
+                                <td>Xe đạp điện</td>
+                                <td>13.800.000</td>
+                                <td>7%</td>
+                                <td>35</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea Buye</td>
+                                <td>Xe máy điện</td>
+                                <td>19.500.000</td>
+                                <td>10%</td>
+                                <td>15</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Zoomer X</td>
+                                <td>Xe đạp điện</td>
+                                <td>10.900.000</td>
+                                <td>5%</td>
+                                <td>45</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Honda Joker</td>
+                                <td>Xe máy điện</td>
+                                <td>22.200.000</td>
+                                <td>8%</td>
+                                <td>8</td>
+                                <td>Honda</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS Nioshima S</td>
+                                <td>Xe đạp điện</td>
+                                <td>12.500.000</td>
+                                <td>6%</td>
+                                <td>55</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Creer</td>
+                                <td>Xe máy điện</td>
+                                <td>18.500.000</td>
+                                <td>7%</td>
+                                <td>20</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Milan</td>
+                                <td>Xe đạp điện</td>
+                                <td>14.200.000</td>
+                                <td>10%</td>
+                                <td>30</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea Xmen Neo</td>
+                                <td>Xe máy điện</td>
+                                <td>21.000.000</td>
+                                <td>5%</td>
+                                <td>12</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Espero</td>
+                                <td>Xe đạp điện</td>
+                                <td>11.500.000</td>
+                                <td>8%</td>
+                                <td>40</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Vinfast Ludo</td>
+                                <td>Xe máy điện</td>
+                                <td>24.000.000</td>
+                                <td>6%</td>
+                                <td>5</td>
+                                <td>Vinfast</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS M133</td>
+                                <td>Xe đạp điện</td>
+                                <td>13.000.000</td>
+                                <td>5%</td>
+                                <td>50</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Pansy</td>
+                                <td>Xe máy điện</td>
+                                <td>19.800.000</td>
+                                <td>7%</td>
+                                <td>18</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Cap A</td>
+                                <td>Xe đạp điện</td>
+                                <td>10.800.000</td>
+                                <td>10%</td>
+                                <td>42</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea Odora S</td>
+                                <td>Xe máy điện</td>
+                                <td>22.500.000</td>
+                                <td>5%</td>
+                                <td>10</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Zoomer</td>
+                                <td>Xe đạp điện</td>
+                                <td>12.200.000</td>
+                                <td>8%</td>
+                                <td>38</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Honda Vsun V2</td>
+                                <td>Xe máy điện</td>
+                                <td>18.200.000</td>
+                                <td>6%</td>
+                                <td>15</td>
+                                <td>Honda</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS Nioshima</td>
+                                <td>Xe đạp điện</td>
+                                <td>14.000.000</td>
+                                <td>7%</td>
+                                <td>52</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Gogo S</td>
+                                <td>Xe máy điện</td>
+                                <td>20.500.000</td>
+                                <td>10%</td>
+                                <td>22</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Milan II Neo</td>
+                                <td>Xe đạp điện</td>
+                                <td>11.000.000</td>
+                                <td>5%</td>
+                                <td>35</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea G5</td>
+                                <td>Xe máy điện</td>
+                                <td>23.800.000</td>
+                                <td>8%</td>
+                                <td>8</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Espero II</td>
+                                <td>Xe đạp điện</td>
+                                <td>13.500.000</td>
+                                <td>6%</td>
+                                <td>48</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Vinfast Klara</td>
+                                <td>Xe máy điện</td>
+                                <td>19.200.000</td>
+                                <td>5%</td>
+                                <td>12</td>
+                                <td>Vinfast</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS Nioshima Plus S</td>
+                                <td>Xe đạp điện</td>
+                                <td>10.500.000</td>
+                                <td>7%</td>
+                                <td>45</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Creer S</td>
+                                <td>Xe máy điện</td>
+                                <td>21.800.000</td>
+                                <td>10%</td>
+                                <td>20</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Milan III</td>
+                                <td>Xe đạp điện</td>
+                                <td>12.800.000</td>
+                                <td>8%</td>
+                                <td>32</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea Xmen</td>
+                                <td>Xe máy điện</td>
+                                <td>18.000.000</td>
+                                <td>5%</td>
+                                <td>18</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Espero III</td>
+                                <td>Xe đạp điện</td>
+                                <td>14.500.000</td>
+                                <td>6%</td>
+                                <td>40</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Honda Vsun V1</td>
+                                <td>Xe máy điện</td>
+                                <td>22.000.000</td>
+                                <td>7%</td>
+                                <td>10</td>
+                                <td>Honda</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS M133 Plus</td>
+                                <td>Xe đạp điện</td>
+                                <td>11.800.000</td>
+                                <td>10%</td>
+                                <td>55</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Pansy SS</td>
+                                <td>Xe máy điện</td>
+                                <td>20.200.000</td>
+                                <td>5%</td>
+                                <td>25</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Cap A Neo</td>
+                                <td>Xe đạp điện</td>
+                                <td>13.200.000</td>
+                                <td>8%</td>
+                                <td>38</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea Odora</td>
+                                <td>Xe máy điện</td>
+                                <td>23.500.000</td>
+                                <td>6%</td>
+                                <td>12</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Zoomer S</td>
+                                <td>Xe đạp điện</td>
+                                <td>10.200.000</td>
+                                <td>5%</td>
+                                <td>42</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Honda Joker S</td>
+                                <td>Xe máy điện</td>
+                                <td>19.000.000</td>
+                                <td>7%</td>
+                                <td>18</td>
+                                <td>Honda</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS Nioshima SS</td>
+                                <td>Xe đạp điện</td>
+                                <td>12.000.000</td>
+                                <td>10%</td>
+                                <td>50</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Gogo</td>
+                                <td>Xe máy điện</td>
+                                <td>21.200.000</td>
+                                <td>8%</td>
+                                <td>28</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Milan Neo</td>
+                                <td>Xe đạp điện</td>
+                                <td>14.800.000</td>
+                                <td>5%</td>
+                                <td>35</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea G5 Pro</td>
+                                <td>Xe máy điện</td>
+                                <td>17.500.000</td>
+                                <td>6%</td>
+                                <td>15</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Espero II S</td>
+                                <td>Xe đạp điện</td>
+                                <td>11.500.000</td>
+                                <td>7%</td>
+                                <td>48</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Vinfast Theon S</td>
+                                <td>Xe máy điện</td>
+                                <td>24.500.000</td>
+                                <td>10%</td>
+                                <td>10</td>
+                                <td>Vinfast</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện NijiaS Nioshima S Plus</td>
+                                <td>Xe đạp điện</td>
+                                <td>13.800.000</td>
+                                <td>8%</td>
+                                <td>45</td>
+                                <td>NijiaS</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Dibao Creer SS</td>
+                                <td>Xe máy điện</td>
+                                <td>19.500.000</td>
+                                <td>5%</td>
+                                <td>22</td>
+                                <td>Dibao</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện Hitasa Milan III Neo</td>
+                                <td>Xe đạp điện</td>
+                                <td>10.000.000</td>
+                                <td>6%</td>
+                                <td>30</td>
+                                <td>Hitasa</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Máy Điện Yadea Xmen S</td>
+                                <td>Xe máy điện</td>
+                                <td>22.800.000</td>
+                                <td>7%</td>
+                                <td>12</td>
+                                <td>Yadea</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xe Đạp Điện DK Bike Espero III S</td>
+                                <td>Xe đạp điện</td>
+                                <td>12.500.000</td>
+                                <td>10%</td>
+                                <td>40</td>
+                                <td>DK Bike</td>
+                                <td class="tools">
+                                    <div class="dropstart font-sans-serif position-static d-inline-block">
+                                        <button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal float-end"
+                                            type="button" data-bs-toggle="dropdown" data-boundary="window"
+                                            aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"
+                                            aria-labelledby="dropdown-number-pagination-table-item-0"><a
+                                                class="dropdown-item edit-product" href="#">Chỉnh sửa</a>
+                                            <a class="dropdown-item text-danger delete-product" href="#">Xóa</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+
+                        <tfoot>
+                            <tr>
+                                <th class="text-900  white-space-nowrap">Tên</th>
+                                <th class="text-900  white-space-nowrap">Danh mục</th>
+                                <th class="text-900  white-space-nowrap">Giá</th>
+                                <th class="text-900  white-space-nowrap">Giảm giá</th>
+                                <th class="text-900  white-space-nowrap">Số lượng</th>
+                                <th class="text-900  white-space-nowrap">Thương hiệu</th>
+                                <th class="text-900" data-orderable="false"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Thêm sản phẩm mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="productForm">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Tên sản phẩm</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Danh mục</label>
+                                <select class="form-select" required>
+                                    <option value="" disabled selected>Chọn danh mục</option>
+                                    <option value="xe-dap">Xe đạp điện</option>
+                                    <option value="xe-may">Xe máy điện</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Giá bán</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Số lượng tồn</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Giảm giá (%)</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Thương hiệu</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mô tả</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Hình ảnh</label>
+                            <input type="file" class="form-control" accept="image/*" multiple>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" form="productForm" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="editProductModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chỉnh sửa sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProductForm">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Tên sản phẩm</label>
+                                <input type="text" class="form-control" id="editName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Danh mục</label>
+                                <select class="form-select" id="editCategory" required>
+                                    <option value="">Chọn danh mục</option>
+                                    <option value="xe-dap">Xe đạp điện</option>
+                                    <option value="xe-may">Xe máy điện</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Giá bán</label>
+                                <input type="number" class="form-control" id="editPrice" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Số lượng tồn</label>
+                                <input type="number" class="form-control" id="editQuantity" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Giảm giá (%)</label>
+                                <input type="number" class="form-control" id="editDiscount" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Thương hiệu</label>
+                                <input type="text" class="form-control" id="editBrand" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mô tả</label>
+                            <textarea class="form-control" id="editDescription" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Hình ảnh</label>
+                            <input type="file" class="form-control" id="editImages" accept="image/*" multiple>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" form="editProductForm" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="deleteProductModal" tabindex="-1" aria-labelledby="deleteProductModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteProductModalLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa <span id="deleteProductName"></span> không?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../js/admin-product.js"></script>
+</body>
+
+</html>
